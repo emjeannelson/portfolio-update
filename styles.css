@@ -22,7 +22,7 @@ a:hover {
   color: #27BDBB;
 }
 
-/* Section Styles */
+/* Global Section Styles */
 
 .main-nav {
   width: 100%;
@@ -60,7 +60,60 @@ a:hover {
   color: white
 }
 
-header {
+footer {
+  width: 100%;
+  min-height: 30px;
+  padding: 20px 0 40px 20px;
+}
+
+footer .copyright {
+  top: -8px;
+  font-size: .75em;
+}
+
+footer ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer ul li {
+  display: inline-block;
+}
+
+a.social {
+  display: inline-block;
+  text-indent: -9999px;
+  margin-left: 5px;
+  width: 30px;
+  height: 30px;
+  background-size: 30px 30px;
+  opacity: .4;
+  transition: all .5s;
+}
+
+a.twitter {
+  background-image: url(images/twitter.svg);
+}
+
+a.linkedin {
+  background-image: url(images/linkedin.svg);
+}
+
+a.github {
+  background-image: url(images/github.svg);
+}
+
+a.social:hover {
+  opacity: 1;
+}
+
+.clearfix {
+  clear: both;
+}
+
+/* Home Page Only Section Styles */
+.home-header {
   text-align: center;
   background: linear-gradient(#27BDBB, transparent 90%),
               linear-gradient(to top, #E2E3E3, transparent 35%),
@@ -70,11 +123,11 @@ header {
   padding-top: 60px;
 }
 
-header {
+.home-header {
   line-height: 1.5;
 }
 
-header .profile-image {
+.home-header .profile-image {
   margin-top: 50px;
   width: 150px;
   height: 150px;
@@ -84,7 +137,7 @@ header .profile-image {
   transition: all .5s;
 }
 
-header .profile-image:hover {
+.home-header .profile-image:hover {
   transform: scale(1.2) rotate(5deg);
 }
 
@@ -151,56 +204,16 @@ ul.skills {
   background: #0399ff;
 }
 
-footer {
-  width: 100%;
-  min-height: 30px;
-  padding: 20px 0 40px 20px;
+/* Experience Page Only Section Styles */
+.my-experience {
+  background-color: rgba(39, 189, 187, .5);
+  padding-top: 60px;
+  overflow: hidden;
 }
 
-footer .copyright {
-  top: -8px;
-  font-size: .75em;
-}
-
-footer ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-footer ul li {
-  display: inline-block;
-}
-
-a.social {
-  display: inline-block;
-  text-indent: -9999px;
-  margin-left: 5px;
-  width: 30px;
-  height: 30px;
-  background-size: 30px 30px;
-  opacity: .4;
-  transition: all .5s;
-}
-
-a.twitter {
-  background-image: url(images/twitter.svg);
-}
-
-a.linkedin {
-  background-image: url(images/linkedin.svg);
-}
-
-a.github {
-  background-image: url(images/github.svg);
-}
-
-a.social:hover {
-  opacity: 1;
-}
-
-.clearfix {
-  clear: both;
+.my-experience h1 {
+  color: #2E3B3A;
+  font-size: 1.5em;
 }
 
 /* Styles for larger screens */
@@ -216,7 +229,7 @@ a.social:hover {
       flex-wrap: wrap;
   }
 
-  header {
+  .home-header {
     min-height: 470px;
   }
 
@@ -238,11 +251,14 @@ a.social:hover {
 
   }
 
+  .my-experience h1 {
+    font-size: 1.85em;
+  }
+
   footer {
     font-size: 1.3em;
     max-width: 1200px;
     margin: 40px auto;
   }
-
 }
 
